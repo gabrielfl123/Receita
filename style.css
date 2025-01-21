@@ -1,168 +1,235 @@
 /* Global styles */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f6f4f0;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f6f4f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 800px;
+  margin: 20px;
+}
+
+/* Image styling */
+section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+section ol {
+  border-bottom: 0.5px solid #f0c987;
+}
+
+/* Headings */
+h1, h2, h4 {
+  color: #2c2c2c;
+  margin: 20px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #f0c987;
+  padding-bottom: 5px;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: #f0a500;
+}
+
+/* Paragraph and list styling */
+p {
+  margin: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+ul, ol {
+  margin: 20px;
+  padding-left: 40px;
+  color: #333;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Preparation time */
+main ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+main ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Nutrition section */
+section:last-of-type {
+  padding: 20px;
+  background-color: #f9f5ee;
+}
+
+section:last-of-type h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+section:last-of-type p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Attribution */
+.attribution {
+  margin: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.attribution a {
+  color: #f0a500;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Nutrition column */
+.nutrition-column {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nutrition-column h2 {
+  font-size: 1.5em;
+  color: #6b3a18; /* Tom de marrom */
+  margin-bottom: 8px;
+}
+
+.nutrition-column p {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.nutrition-column table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition-column td {
+  padding: 8px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.nutrition-column td:first-child {
+  text-align: left;
+}
+
+.nutrition-column td:last-child {
+  text-align: right;
+  font-weight: bold;
+  color: #6b3a18; /* Tom de marrom */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
   }
-  
+
   section {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 800px;
-    margin: 20px;
+    margin: 10px;
+    max-width: 100%;
   }
-  
-  /* Image styling */
-  section img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  section ol {
-    border-bottom: 0.5px solid #f0c987;
-  }
-  /* Headings */
-  h1, h2, h4 {
-    color: #2c2c2c;
-    margin: 20px;
-    font-weight: bold;
-  }
-  
+
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin: 15px;
   }
-  
+
   h2 {
-    font-size: 1.5rem;
-    border-bottom: 2px solid #f0c987;
-    padding-bottom: 5px;
+    font-size: 1.3rem;
   }
-  
+
   h4 {
-    font-size: 1.2rem;
-    color: #f0a500;
-  }
-  
-  /* Paragraph and list styling */
-  p {
-    margin: 20px;
     font-size: 1rem;
-    color: #555;
-  }
-  
-  ul, ol {
-    margin: 20px;
-    padding-left: 40px;
-    color: #333;
-  }
-  
-  li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-  }
-  
-  /* Preparation time */
-  main ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  main ul li {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 5px;
   }
 
-  section h2 {
-    
+  p, li {
+    font-size: 0.9rem;
   }
-  
-  /* Nutrition section */
-  section:last-of-type {
-    padding: 20px;
-    background-color: #f9f5ee;
-  }
-  
-  section:last-of-type h1 {
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  section:last-of-type p {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  /* Attribution */
-  .attribution {
-    margin: 20px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #888;
-  }
-  
-  .attribution a {
-    color: #f0a500;
-    text-decoration: none;
-  }
-  
-  .attribution a:hover {
-    text-decoration: underline;
-  }
-
 
   .nutrition-column {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    max-width: 10000px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
+    padding: 12px;
   }
-  
+
   .nutrition-column h2 {
-    font-size: 1.5em;
-    color: #6b3a18; /* Tom de marrom */
-    margin-bottom: 8px;
+    font-size: 1.2em;
   }
-  
+
   .nutrition-column p {
-    font-size: 0.9em;
-    color: #555;
-    margin-bottom: 16px;
+    font-size: 0.8em;
   }
-  
-  .nutrition-column table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
+
   .nutrition-column td {
-    padding: 8px 0;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  p, li {
+    font-size: 0.8rem;
+  }
+
+  .nutrition-column {
+    padding: 10px;
+  }
+
+  .nutrition-column h2 {
     font-size: 1em;
-    color: #333;
   }
-  
-  .nutrition-column td:first-child {
-    text-align: left;
+
+  .nutrition-column td {
+    font-size: 0.8em;
   }
-  
-  .nutrition-column td:last-child {
-    text-align: right;
-    font-weight: bold;
-    color: #6b3a18; /* Tom de marrom */
-  }
-  
-  
+}
